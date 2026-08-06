@@ -3,7 +3,34 @@
         "id": 0,
         "manufacturer": "Citreon",
         "model": "C1",
+        "generation": "First Generation, 2005-2014",
+        "colours": ["Lipizan white", "Oural White", "Caldera Black", "Gallium Grey", "Carlinite Grey", "Aluminium Grey", "Scarlet Red", "Sunrise Red", "Orange Mandaline", "Electra Blue", "Botticelli Blue", "Calvi Blue", "Damas Blue", "Lime Green", "Green", "Pacific Green", "Plum/Viola", "Citrus Yellow"],
+        "trim_levels": ["Vibe", "Rhythm", "Lounges", "Airplay", "Platinum", "VT", "VTR", "VTR+"],
+        "specials": ["Cool", "Splash", "Code", "Black/White"],
+        "engine_options": ["1.0L 3-Cylinder Petrol", "1.4L 4-CylinderDiesel"],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Citro%C3%ABn_C1_III_1.0_VTi_68_Seduction_hatchback_%E2%80%93_Frontansicht%2C_4._Juli_2014%2C_D%C3%BCsseldorf.jpg/1200px-Citro%C3%ABn_C1_III_1.0_VTi_68_Seduction_hatchback_%E2%80%93_Frontansicht%2C_4._Juli_2014%2C_D%C3%BCsseldorf.jpg"
- }
-
+    },
+     {
+        "id": 1,
+        "manufacturer": "Citreon",
+        "model": "C1",
+        "generation": "Second Generation, 2014-2022",
+        "colours": ["Caldera Blakc", "Gallium Grey", "Carlinite Grey", "Lipizan white", "Scarlet Red", "Smalt Blue", "Sunrise Red", "Blue Lagoon", "Pacific Green", "Fine Copper", "Olive Brown", "Jelly Berry", "Ultra Emerald Blue", "Calvi Blue", "Galaxite Grey"],
+        "trim_levels": ["Touch", "Feel", "Flair", "Urban Ride", "Shine"],
+        "specials": ["Furio", "Elle", "JCC+", "Origins", "Pacific Green/Menthol"],
+        "engine_options": ["1.0L Petrol", "1.2L Puretech Petrol"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Citro%C3%ABn_C1_III_1.0_VTi_68_Seduction_hatchback_%E2%80%93_Frontansicht%2C_4._Juli_2014%2C_D%C3%BCsseldorf.jpg/1200px-Citro%C3%ABn_C1_III_1.0_VTi_68_Seduction_hatchback_%E2%80%93_Frontansicht%2C_4._Juli_2014%2C_D%C3%BCsseldorf.jpg"
+    },
+     {
+        "id": 1,
+        "manufacturer": "Citreon",
+        "model": "C1",
+        "generation": "Second Generation Airscape, 2014-2022",
+        "colours": ["Caldera Black", "Gallium Grey", "Carlinite Grey", "Lipizan white", "Scarlet Red", "Smalt Blue", "Sunrise Red", "Blue Lagoon", "Pacific Green", "Fine Copper", "Olive Brown", "Jelly Berry", "Ultra Emerald Blue", "Calvi Blue", "Galaxite Grey"],
+        "trim_levels": ["Touch", "Feel", "Flair", "Urban Ride", "Shine"],
+        "engine_options": ["1.0L Petrol", "1.2L Puretech Petrol"],
+        "specials": ["Furio", "Elle", "JCC+", "Origins", "Pacific Green/Menthol"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Citro%C3%ABn_C1_III_1.0_VTi_68_Seduction_hatchback_%E2%80%93_Frontansicht%2C_4._Juli_2014%2C_D%C3%BCsseldorf.jpg/1200px-Citro%C3%ABn_C1_III_1.0_VTi_68_Seduction_hatchback_%E2%80%93_Frontansicht%2C_4._Juli_2014%2C_D%C3%BCsseldorf.jpg"
+    }
+    
 ]

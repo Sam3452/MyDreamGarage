@@ -10,4 +10,18 @@
     background-color: blue;
     width: 200px;
     height: 300px;
+    padding: 16px;
 }
+
+#car-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+}
+
+.car-box img {
+    width: 100%;
+    border-radius: 4px;
+}
+
