@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+"""
+Simple Python HTTP server.
+Serves files from the current directory (or a folder you specify).
+
+Usage:
+    python server.py            # serves current directory on port 8000
+    python server.py 5000       # serves current directory on port 5000
+"""
+
+import http.server
+import socketserver
+import sys
+
+PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
+
+Handler = http.server.SimpleHTTPRequestHandler
+
+with socketserver.TCPServer(("", PORT), Handler) as httpd:
+    print(f"Serving at http://localhost:{PORT}")
+    print("Press Ctrl+C to stop.")
+    try:
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        print("\nServer stopped.")
