@@ -9,8 +9,11 @@
 .car-box {
     background-color: blue;
     width: 200px;
-    height: 300px;
-    padding: 16px;
+    height: 200px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 #car-container {
@@ -22,6 +25,50 @@
 
 .car-box img {
     width: 100%;
-    border-radius: 4px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
+.car-box:hover {
+    transform: scale(1.03);
+}
+
+#car-info {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#info-content {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+#closeInfo {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+#info-content img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
