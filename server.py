@@ -1,13 +1,3 @@
-#!/usr/bin/env python3
-"""
-Simple Python HTTP server.
-Serves files from the current directory (or a folder you specify).
-
-Usage:
-    python server.py            # serves current directory on port 8000
-    python server.py 5000       # serves current directory on port 5000
-"""
-
 import http.server
 import socketserver
 import sys
