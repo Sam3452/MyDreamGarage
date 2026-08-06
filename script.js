@@ -9,7 +9,7 @@ async function getCars() {
             const carBox = document.createElement('div');
             carBox.classList.add('car-box');
 
-            carBox.innerHTML = `<img src="${car.image}" alt="${car.manufacturer} ${car.model}">`;
+            carBox.innerHTML = `<img src="${car.image}" alt="${car.manufacturer} ${car.model}" title="${car.manufacturer} ${car.model} ${car.generation}">`;
 
             carBox.addEventListener('click', () => openInfo(car));
 
