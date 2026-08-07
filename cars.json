@@ -23,7 +23,7 @@
         "image": "c1gen2.jpg"
     },
      {
-        "id": 1,
+        "id": 2,
         "manufacturer": "Citreon",
         "model": "C1",
         "generation": "Second Generation Airscape, 2014-2022",
@@ -32,6 +32,39 @@
         "engine_options": ["1.0L Petrol", "1.2L Puretech Petrol"],
         "specials": ["Furio", "Elle", "JCC+", "Origins", "Pacific Green/Menthol"],
         "image": "c1air.jpg"
-    }
+    },
+    {
+    "id": 3,
+    "manufacturer": "Fiat",
+    "model": "500",
+    "generation": "Second Generation (Type 312), 2007-2024",
+    "colours": ["Bossa Nova White", "Gelato White", "Nero Vulcano Black", "Grigio Moda Grey", "Rosso Passione Red", "Rosso Amore Red", "Azzurro Italia Blue", "Verde Toscana Green", "Giallo Sicilia Yellow", "Arancio Sole Orange", "Rosa Corallo Pink"],
+    "trim_levels": ["Pop", "Pop Star", "Lounge", "Sport", "S"],
+    "specials": ["Gucci", "1957 Edition", "Dolcevita", "RED"],
+    "engine_options": ["1.2L Fire Petrol", "0.9L TwinAir Petrol", "1.4L MultiAir Petrol", "1.3L Multijet Diesel"],
+    "image": "fiat500.jpg"
+},
+{
+    "id": 4,
+    "manufacturer": "Ford",
+    "model": "Fiesta",
+    "generation": "Mk7, 2008-2017",
+    "colours": ["Frozen White", "Panther Black", "Candy Blue", "Race Red", "Deep Orange", "Chill", "Sunset", "Magnetic Grey"],
+    "trim_levels": ["Studio", "Style", "Zetec", "Zetec S", "Titanium", "Titanium X", "ST-Line"],
+    "specials": ["Red Edition", "Black Edition", "S1600", "ST200"],
+    "engine_options": ["1.25L Petrol", "1.4L Petrol", "1.6L Petrol", "1.0L EcoBoost Petrol", "1.6L EcoBoost Petrol (ST)", "1.5L TDCi Diesel"],
+    "image": "Fiesta.jpg"
+},
+{
+    "id": 5,
+    "manufacturer": "Toyota",
+    "model": "Aygo",
+    "generation": "First Generation, 2005-2014",
+    "colours": ["Pure White", "Black Mica", "Silver Metallic", "Vivid Blue", "Cherry Red", "Lime Green"],
+    "trim_levels": ["T2", "T3", "Sport", "Active", "Active Plus", "Mode", "Move"],
+    "specials": ["Blue", "Black", "Fire", "Ice", "Go", "Platinum"],
+    "engine_options": ["1.0L 3-Cylinder Petrol", "1.4L Diesel"],
+    "image": "aygo.jpg"
+}
     
 ]
