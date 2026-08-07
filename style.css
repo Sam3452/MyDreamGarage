@@ -72,3 +72,22 @@
     border-radius: 4px;
     margin-bottom: 12px;
 }
+
+.search-bar {
+    padding: 20px 20px 0 20px;
+}
+
+#car-search {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#car-search:focus {
+    outline: none;
+    border-color: #3b3bff;
+}

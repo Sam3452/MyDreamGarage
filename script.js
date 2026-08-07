@@ -1,26 +1,4 @@
-async function getCars() {
-    try {
-        const response = await fetch('cars.json');
-        const cars = await response.json();
 
-        const container = document.getElementById('car-container');
-
-        cars.forEach(car => {
-            const carBox = document.createElement('div');
-            carBox.classList.add('car-box');
-
-            carBox.innerHTML = `<img src="${car.image}" alt="${car.manufacturer} ${car.model}" title="${car.manufacturer} ${car.model} ${car.generation}">`;
-
-            carBox.addEventListener('click', () => openInfo(car));
-
-            container.appendChild(carBox);
-    
-        });
-    } catch (error) {
-        console.error('Error getting cars:', error);
-
-    }
-}
 
 function openInfo(car) {
     const infoBox = document.getElementById('car-info');
@@ -52,4 +30,47 @@ document.addEventListener('click', (e) => {
     if (e.target === infoBox) closeInfo();
 });
 
-getCars();
+let allCars = [];
+
+async function searchCars() {
+    try {
+        const response = await fetch('cars.json');
+        allCars = await response.json();
+        renderCars(allCars);
+    } catch (error) {
+        console.error('Error searching cars:', error);
+    }
+}
+
+function renderCars(cars) {
+    const container = document.getElementById('car-container');
+    container.innerHTML = '';
+
+    cars.forEach(car => {
+        const carBox = document.createElement('div');
+        carBox.classList.add('car-box');
+
+        carBox.innerHTML = `<img src="${car.image}" alt="${car.manufacturer} ${car.model}" title="${car.manufacturer} ${car.model} ${car.generation}">`;
+
+        carBox.addEventListener('click', () => openInfo(car));
+
+        container.appendChild(carBox);
+    });
+}
+
+function filterCars(query) {
+    const lowerQuery = query.toLowerCase().trim();
+    const filtered = allCars.filter(car => 
+        car.manufacturer.toLowerCase().includes(lowerQuery) ||
+        car.model.toLowerCase().includes(lowerQuery) ||
+        car.generation.toLowerCase().includes(lowerQuery)
+    );
+
+    renderCars(filtered);
+}
+
+document.getElementById('car-search').addEventListener('input', (e) => {
+    filterCars(e.target.value);
+});
+
+searchCars();
