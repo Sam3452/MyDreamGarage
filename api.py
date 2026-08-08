@@ -40,4 +40,21 @@ def get_car(car_id):
         return jsonify({'error': 'Car not found'}), 404
     return jsonify(row_to_car(row))
 
+@app.route('/api/cars', methods=['POST'])
+def add_car():
+    data = request.json
+    conn = get_db()
+    conn.execute('''
+        INSER INTO cars (manufacturer, model, generation, colours, trim_levels, specials, engine_options, image)
+    ''', (
+            data['manufacturer'], data['model'], data['generation'],
+            json.dumps(data['colours']), json.dumps(data['trim_levels']),
+            json.dumps(data['specials']), json.dumps(data['engine_options']),
+            data['image']
+    ))
+    conn.commit()
+    conn.close()
+    return jsonify({'status': 'created'}), 201
 
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
