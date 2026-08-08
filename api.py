@@ -46,7 +46,7 @@ def add_car():
     conn = get_db()
     conn.execute('''
         INSERT INTO cars (manufacturer, model, generation, colours, trim_levels, specials, engine_options, image) 
-        VALUES (?,?,?,?,?,?,?,?,?)
+        VALUES (?,?,?,?,?,?,?,?)
     ''', (
             data['manufacturer'], data['model'], data['generation'],
             json.dumps(data['colours']), json.dumps(data['trim_levels']),
