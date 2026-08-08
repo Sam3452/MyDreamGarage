@@ -23,9 +23,9 @@ with open('cars.json') as f:
 
 for car in cars:
     cursor.execute('''
-INSERT OR REPLACE cars (id, manufacturer, model, generation, colours, trim_levels, specials, engine_options, image)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-''', (
+    INSERT OR REPLACE INTO cars  (id, manufacturer, model, generation, colours, trim_levels, specials, engine_options, image)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ''', (
     car['id'],
     car['manufacturer'],
     car['model'],
@@ -37,7 +37,6 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
     car['image']
 ))
 
-    conn.commit()
-    conn.close()
-    print("Datbase Created and populated")
-    
+conn.commit()
+conn.close()
+print("Datbase Created and populated")
