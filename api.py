@@ -31,7 +31,7 @@ def get_cars():
     conn.close()
     return jsonify([row_to_car(r) for r in rows])
 
-@app.route('/api/cars/<int:car_id>', method=['GET'])
+@app.route('/api/cars/<int:car_id>', methods=['GET'])
 def get_car(car_id):
     conn = get_db()
     row = conn.execute('SELECT * FROM cars WHERE id = ?', (car_id,)).fetchone()
@@ -45,7 +45,8 @@ def add_car():
     data = request.json
     conn = get_db()
     conn.execute('''
-        INSER INTO cars (manufacturer, model, generation, colours, trim_levels, specials, engine_options, image)
+        INSERT INTO cars (manufacturer, model, generation, colours, trim_levels, specials, engine_options, image) 
+        VALUES (?,?,?,?,?,?,?,?,?)
     ''', (
             data['manufacturer'], data['model'], data['generation'],
             json.dumps(data['colours']), json.dumps(data['trim_levels']),
@@ -55,6 +56,10 @@ def add_car():
     conn.commit()
     conn.close()
     return jsonify({'status': 'created'}), 201
+
+@app.route('/')
+def home():
+    return jsonify({'message': 'Car API is running. Try /api/cars'})
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

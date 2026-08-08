@@ -34,7 +34,7 @@ let allCars = [];
 
 async function searchCars() {
     try {
-        const response = await fetch('cars.json');
+        const response = await fetch('http://localhost:5000/api/cars');
         allCars = await response.json();
         renderCars(allCars);
     } catch (error) {
