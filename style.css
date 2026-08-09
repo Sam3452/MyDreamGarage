@@ -1,6 +1,4 @@
-.header {
-    text-align: left;
-}
+
 
 .container {
     background-color: grey;
@@ -90,4 +88,46 @@
 #car-search:focus {
     outline: none;
     border-color: #3b3bff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: grey;
+    padding: 16px 24px;
+    width: 100%;
+}
+
+.nav-icon-spacer {
+    width: 90px;
+}
+
+.nav-logo {
+    text-align: center;
+    flex: 1;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 16px;
+    width: 90px;
+    justify-content: flex-end;
+}
+
+.nav-icon {
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.nav-icon:hover {
+    opacity: 1;
 }

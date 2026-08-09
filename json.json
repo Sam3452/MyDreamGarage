@@ -1,16 +1,4 @@
     [
-          {
-        "id": 1,
-        "manufacturer": "AC",
-        "model": "2-Litre",
-        "generation": "1947-1958",
-        "colours": ["Beige Fonce", "Slate grey", "AC Blue", "National Grey/Green"],
-        "trim_levels": ["2-Door saloon", "4-Door Saloon", "Buckland Tourer", "Sports Tourer", "Drophead Coupe"],
-        "specials": [""],
-        "engine_options": ["2-Litre Petrol, inline 6"],
-        "image": "images/ac2.jpg"
-
-    },
         {
         "id": 100,
         "manufacturer": "Citreon",
@@ -20,7 +8,7 @@
         "trim_levels": ["Vibe", "Rhythm", "Lounges", "Airplay", "Platinum", "VT", "VTR", "VTR+"],
         "specials": ["Cool", "Splash", "Code", "Black/White"],
         "engine_options": ["1.0L 3-Cylinder Petrol", "1.4L 4-CylinderDiesel"],
-        "image": "images/c1.jpg"
+        "image": "c1.jpg"
 
     },
     {
@@ -32,7 +20,7 @@
         "trim_levels": ["Touch", "Feel", "Flair", "Urban Ride", "Shine"],
         "specials": ["Furio", "Elle", "JCC+", "Origins", "Pacific Green/Menthol"],
         "engine_options": ["1.0L Petrol", "1.2L Puretech Petrol"],
-        "image": "images/c1gen2.jpg"
+        "image": "c1gen2.jpg"
     },
      {
         "id": 102,
@@ -43,7 +31,7 @@
         "trim_levels": ["Touch", "Feel", "Flair", "Urban Ride", "Shine"],
         "engine_options": ["1.0L Petrol", "1.2L Puretech Petrol"],
         "specials": ["Furio", "Elle", "JCC+", "Origins", "Pacific Green/Menthol"],
-        "image": "images/c1air.jpg"
+        "image": "c1air.jpg"
     },
     {
     "id": 103,
@@ -54,7 +42,7 @@
     "trim_levels": ["Pop", "Pop Star", "Lounge", "Sport", "S"],
     "specials": ["Gucci", "1957 Edition", "Dolcevita", "RED"],
     "engine_options": ["1.2L Fire Petrol", "0.9L TwinAir Petrol", "1.4L MultiAir Petrol", "1.3L Multijet Diesel"],
-    "image": "images/fiat500.jpg"
+    "image": "fiat500.jpg"
 },
 {
     "id": 104,
@@ -65,7 +53,7 @@
     "trim_levels": ["Studio", "Style", "Zetec", "Zetec S", "Titanium", "Titanium X", "ST-Line"],
     "specials": ["Red Edition", "Black Edition", "S1600", "ST200"],
     "engine_options": ["1.25L Petrol", "1.4L Petrol", "1.6L Petrol", "1.0L EcoBoost Petrol", "1.6L EcoBoost Petrol (ST)", "1.5L TDCi Diesel"],
-    "image": "images/Fiesta.jpg"
+    "image": "Fiesta.jpg"
 },
 {
     "id": 105,
@@ -76,7 +64,7 @@
     "trim_levels": ["T2", "T3", "Sport", "Active", "Active Plus", "Mode", "Move"],
     "specials": ["Blue", "Black", "Fire", "Ice", "Go", "Platinum"],
     "engine_options": ["1.0L 3-Cylinder Petrol", "1.4L Diesel"],
-    "image": "images/aygo.jpg"
+    "image": "aygo.jpg"
 }
     ]
     
