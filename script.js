@@ -37,6 +37,7 @@ async function searchCars() {
         const response = await fetch('http://localhost:5000/api/cars');
         allCars = await response.json();
         renderCars(allCars);
+        populateManufacturerFilter();
     } catch (error) {
         console.error('Error searching cars:', error);
     }
@@ -58,13 +59,21 @@ function renderCars(cars) {
     });
 }
 
-function filterCars(query) {
-    const lowerQuery = query.toLowerCase().trim();
-    const filtered = allCars.filter(car => 
-        car.manufacturer.toLowerCase().includes(lowerQuery) ||
-        car.model.toLowerCase().includes(lowerQuery) ||
-        car.generation.toLowerCase().includes(lowerQuery)
-    );
+function filterCars() {
+    const query = document.getElementById('car-search').value.toLowerCase().trim()
+    const selectedMake = document.getElementById('manufacturer-filter').value;
+
+    const filtered = allCars.filter(car => {
+        const matchesSearch =
+    
+        car.manufacturer.toLowerCase().includes(query) ||
+        car.model.toLowerCase().includes(query) ||
+        car.generation.toLowerCase().includes(query)
+
+    const matchesMake = selectedMake === '' || car.manufacturer === selectedMake;
+
+    return matchesSearch && matchesMake;
+});
 
     renderCars(filtered);
 }
@@ -72,5 +81,22 @@ function filterCars(query) {
 document.getElementById('car-search').addEventListener('input', (e) => {
     filterCars(e.target.value);
 });
+
+function populateManufacturerFilter() {
+    const select = document.getElementById('manufacturer-filter');
+
+    const manufacturers = [...new Set(allCars.map(car => car.manufacturer))].sort();
+
+    manufacturers.forEach(make => {
+        const option = document.createElement('option');
+        option.value = make;
+        option.textContent = make;
+        select.appendChild(option);
+    });
+}
+
+
+document.getElementById('car-search').addEventListener('input', filterCars);
+document.getElementById('manufacturer-filter').addEventListener('change', filterCars);
 
 searchCars();

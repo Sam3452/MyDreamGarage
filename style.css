@@ -132,4 +132,38 @@
 
 .nav-icon:hover {
     opacity: 1;
+}.controls-bar {
+    display: flex;
+    gap: 12px;
+    padding: 20px 20px 0 20px;
 }
+
+#car-search {
+    flex: 1;
+    max-width: 400px;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#car-search:focus {
+    outline: none;
+    border-color: #3b3bff;
+}
+
+#manufacturer-filter {
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#manufacturer-filter:focus {
+    outline: none;
+    border-color: #3b3bff;
+}
+
