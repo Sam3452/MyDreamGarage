@@ -3,15 +3,27 @@ import requests
 API_URL = "http://127.0.0.1:5000/api/cars"
 
 new_cars = [ {
-        "id": 100,
-        "manufacturer": "Citreon",
-        "model": "C1",
-        "generation": "First Generation, 2005-2014",
-        "colours": ["Lipizan white", "Oural White", "Caldera Black", "Gallium Grey", "Carlinite Grey", "Aluminium Grey", "Scarlet Red", "Sunrise Red", "Orange Mandaline", "Electra Blue", "Botticelli Blue", "Calvi Blue", "Damas Blue", "Lime Green", "Green", "Pacific Green", "Plum/Viola", "Citrus Yellow"],
-        "trim_levels": ["Vibe", "Rhythm", "Lounges", "Airplay", "Platinum", "VT", "VTR", "VTR+"],
-        "specials": ["Cool", "Splash", "Code", "Black/White"],
-        "engine_options": ["1.0L 3-Cylinder Petrol", "1.4L 4-CylinderDiesel"],
-        "image": "c1.jpg"
+        "id": 2,
+        "manufacturer": "AC",
+        "model": "Petite",
+        "generation": "First Generation, 1952-1958",
+        "colours": ["Bright Blue", "Pale Blue", "Fawn (Beige/ Tan),", "Mist Silver", "Ruby Red"],
+        "trim_levels": ["4-Speed Manual Gearbox", "3 Wheeler with single front wheel"],
+        "specials": [""],
+        "engine_options": ["350cc Villeries  27B single cyclinder, Petrol"],
+        "image": "images/acpetitemk1.jpg"
+
+    },
+    {
+        "id": 3,
+        "manufacturer": "AC",
+        "model": "Petite",
+        "generation": "Second Generation, 1955-1958",
+        "colours": ["Bright Blue", "Pale Blue", "Fawn (Beige/ Tan),", "Mist Silver", "Ruby Red"],
+        "trim_levels": ["4-Speed Manual Gearbox", "3 Wheeler with single front wheel"],
+        "specials": [""],
+        "engine_options": ["Villiers 28B engine, Petrol"],
+        "image": "images/acpetite.jpg"
 
     },
     ]
