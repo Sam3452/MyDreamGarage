@@ -9,6 +9,7 @@ function openInfo(car) {
         <img src="${car.image}" alt="${car.manufacturer} ${car.model}">
         <h2>${car.manufacturer} ${car.model}</h2>
         <p>${car.generation}</p>
+        <p>${car.extra_info}</p>
         <p>Colours:${car.colours.join(', ')}</p>
         <p>Trim Levels: ${car.trim_levels.join(', ')}</p>
         <p>Specials: ${car.specials.join(', ')}</p>
@@ -99,7 +100,7 @@ function populateModelFilter() {
     });
 }
 
-const CARS_PER_PAGE = 8;
+const CARS_PER_PAGE = 20;
 let currentPage = 1;
 let currentFilteredCars = [];
 

@@ -17,6 +17,7 @@ def row_to_car(row):
         'manufacturer': row['manufacturer'],
         'model': row['model'],
         'generation': row['generation'],
+        'extra_info': row['extra_info'],
         'colours': json.loads(row['colours']),
         'trim_levels': json.loads(row['trim_levels']),
         'specials': json.loads(row['specials']),
@@ -45,10 +46,10 @@ def add_car():
     data = request.json
     conn = get_db()
     conn.execute('''
-        INSERT INTO cars (manufacturer, model, generation, colours, trim_levels, specials, engine_options, image) 
-        VALUES (?,?,?,?,?,?,?,?)
+        INSERT INTO cars (manufacturer, model, generation, extra_info, colours, trim_levels, specials, engine_options, image) 
+        VALUES (?,?,?,?,?,?,?,?,?)
     ''', (
-            data['manufacturer'], data['model'], data['generation'],
+            data['manufacturer'], data['model'], data['generation'], data.get('extra_info', ''),
             json.dumps(data['colours']), json.dumps(data['trim_levels']),
             json.dumps(data['specials']), json.dumps(data['engine_options']),
             data['image']
